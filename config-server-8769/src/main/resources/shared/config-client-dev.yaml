@@ -1,0 +1,4 @@
+server:
+  port: 8770
+
+foo: foo version 1.0

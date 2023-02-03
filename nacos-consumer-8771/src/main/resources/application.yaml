@@ -1,0 +1,16 @@
+server:
+  port: 8771
+spring:
+  application:
+    name: nacos-provider-8771
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+serviceprovider:
+  service1: nacos-provider-8770

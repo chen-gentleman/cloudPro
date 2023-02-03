@@ -1,0 +1,21 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: eureka-ribbon-client
+eureka:
+  client:
+    server-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+service:
+  service1: eureka-client-8762
+
+feign:
+  hystrix:
+    enabled: true

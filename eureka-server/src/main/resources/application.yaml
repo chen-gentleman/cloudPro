@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost  #指定主机地址
+  #client:
+    #registerWithEureka: false  #指定是否要注册到注册中心（注册中心不需要开启 注册中心为集群时，就需要配置）
+    #fetch-registry: false  #指定是否要从注册中心获取服务（注册中心不需要开启 注册中心为集群时，就需要配置）
+    #service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #配置注册中心地址(注册中心不需要开启,当是注册中心为集群时，就需要配置，为其他注册中心的url）
+  #集群配置
+  client:
+    registerWithEureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8764/eureka/ #注册到另一个Eureka注册中心
+
+

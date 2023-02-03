@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-client
+  config:
+    import: configserver:http://localhost:8769
+  profiles:
+    active: dev
+# ${spring.application.name} + "-" + ${profiles.active} 构成向配置中心读取的配置文件名字
